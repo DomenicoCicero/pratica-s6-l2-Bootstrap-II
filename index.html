@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      .fs-0 {
+        font-size: 3.5rem;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-info-subtle">
         <div class="container-fluid">
           <div class="container">
             <div class="row d-flex align-items-center justify-content-between">
-              <img src="./assets/img/logo.jpg" alt="logo" class="col-2" />
+              <img src="./assets/img/logo.jpg" alt="logo" class="col-2 rounded-circle" />
               <button
                 class="navbar-toggler col-2"
                 type="button"
@@ -29,16 +34,16 @@
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#Home">Home</a>
-                <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#Saldi">Saldi</a>
+              <div class="collapse navbar-collapse col-5" id="navbarSupportedContent">
+                <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#home">Home</a>
+                <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#saldi">Saldi</a>
                 <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#welcome-summer"
                   >Welcome Summer</a
                 >
                 <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#last-minute"
                   >Last Minute</a
                 >
-                <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#Recensioni"
+                <a class="fs-6 me-2 text-body-tertiary link-underline link-underline-opacity-0" href="#recensioni"
                   >Recensioni</a
                 >
                 <form class="d-flex ms-auto" role="search">
@@ -60,292 +65,345 @@
           </div>
         </div>
       </nav>
-
-      <div class="container bg-body-tertiary mt-5 p-5 rounded text-center text-lg-start">
-        <div class="border-bottom">
-          <h1 class="text-secondary-emphasis fw-lighter fs-1">
-            Eveline-R <span class="text-secondary fs-6 align-middle">-Feel the Freedom</span>
-          </h1>
-        </div>
-        <p class="text-secondary mt-2">Scopri le destinazioni più calde del momento!</p>
+    </header>
+    <main id="home">
+      <div class="container bg-info-subtle mt-5 p-5 text-center text-lg-start">
+        <h1 class="fs-0 fw-lighter text-secondary-emphasis border-bottom border-secondary-subtle border-bottom">
+          Eveline - R<span class="fs-6 text-body-tertiary text-secondary align-middle">-Feel the Freedom</span>
+        </h1>
+        <p class="fst-italic text-light-emphasis fs-5">Scopri le destinazioni più calde del momento!</p>
         <button type="button" class="bg-info text-white border border-0 rounded px-4 py-1 mt-3">Prenota ora</button>
       </div>
-    </header>
-    <main id="Home">
-      <div id="Saldi" class="container mt-4">
-        <h3>Saldi</h3>
-        <div class="row">
-          <div class="card col-6 col-md-4 col-lg-3 border border-info">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+      <div class="container mt-5" id="saldi">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4 class="mb-3">Saldi</h4>
+          <button
+            class="btn btn-primary bg-white border border-0 text-primary pb-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSaldi"
+            aria-expanded="false"
+            aria-controls="collapseSaldi"
+          >
+            Nascondi sezione
+          </button>
+        </div>
+        <div class="collapse show" id="collapseSaldi">
+          <div class="row d-flex justify-content-between">
+            <div class="card col-5 col-md-3 col-lg-2 mb-3 p-0 border border-info">
+              <img
+                src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJpbyUyMGRlJTIwamFuZWlyb3xlbnwwfHwwfHx8MA%3D%3D"
+                class="card-img-top w-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Rio De Janeiro</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-md-4 col-lg-3 border border-info">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top w-100"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-md-3 col-lg-2 mb-3 p-0 border border-info">
+              <img
+                src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmFyY2VsbG9uYXxlbnwwfHwwfHx8MA%3D%3D"
+                class="card-img-top w-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Barcellona</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-md-4 col-lg-3 border border-info">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-md-3 col-lg-2 mb-3 p-0 border border-info">
+              <img
+                src="https://images.unsplash.com/photo-1680356313492-c27bb09ed47b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWwlMjBjYWlyb3xlbnwwfHwwfHx8MA%3D%3D"
+                class="card-img-top w-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">El Cairo</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card d-md-none d-lg-inline-block col-6 col-lg-3 border border-info">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-md-3 col-lg-2 mb-3 p-0 border border-info d-md-none d-lg-inline-block">
+              <img
+                src="https://images.unsplash.com/photo-1483653364400-eedcfb9f1f88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5ldyUyMHlvcmt8ZW58MHx8MHx8fDA%3D"
+                class="card-img-top w-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">New York</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="welcome-summer" class="container mt-4">
-        <h3>Welcome Summer</h3>
-        <div class="row">
-          <div class="card col-6 col-lg-4 col-xl-2">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+      <div class="container mt-3" id="welcome-summer">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4 class="mb-3">Welcome Summer</h4>
+          <button
+            class="btn btn-primary bg-white border border-0 text-primary pb-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseWS"
+            aria-expanded="false"
+            aria-controls="collapseWS"
+          >
+            Nascondi sezione
+          </button>
+        </div>
+        <div class="collapse show" id="collapseWS">
+          <div class="row d-flex justify-content-between flex-wrap">
+            <div class="card col-5 col-lg-3 col-xl-1 mb-3 me-1 p-0 border border-info shadow">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJpbyUyMGRlJTIwamFuZWlyb3xlbnwwfHwwfHx8MA%3D%3D"
+                  class="card-img-top w-100 h-100"
+                  alt="..."
+                />
+                <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger mt-1 me-1"> HOT </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Rio De Janeiro</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-lg-4 col-xl-2">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-lg-3 col-xl-1 mb-3 p-0 border border-info shadow">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjaHUlMjBwaWNjaHV8ZW58MHx8MHx8fDA%3D"
+                  class="card-img-top w-100 h-100"
+                  alt="..."
+                />
+                <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger mt-1 me-1"> HOT </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Machu Picchu</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-lg-4 col-xl-2">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-lg-3 col-xl-1 mb-3 p-0 border border-info shadow">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1533094602577-198d3beab8ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzY2F0ZSUyMGRlbCUyMG5pYWdhcmF8ZW58MHx8MHx8fDA%3D"
+                  class="card-img-top w-100 h-100"
+                  alt="..."
+                />
+                <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger mt-1 me-1"> HOT </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Cascate del niagara</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-lg-4 col-xl-2">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-lg-3 col-xl-1 mb-3 p-0 border border-info shadow">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFtc3RlcmRhbXxlbnwwfHwwfHx8MA%3D%3D"
+                  class="card-img-top w-100 h-100"
+                  alt="..."
+                />
+                <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger mt-1 me-1"> HOT </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Amsterdam</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-lg-4 col-xl-2">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-lg-3 col-xl-1 mb-3 p-0 border border-info shadow">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1562517634-baa2da3acfbf?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1pYW1pfGVufDB8fDB8fHww"
+                  class="card-img-top w-100 h-100"
+                  alt="..."
+                />
+                <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger mt-1 me-1"> HOT </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Miami</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
-          </div>
-          <div class="card col-6 col-lg-4 col-xl-2">
-            <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary bg-info text-black">Prenota</a>
+            <div class="card col-5 col-lg-3 col-xl-1 mb-3 p-0 border border-info shadow">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1598222446273-bbe74e3abd1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2VmYWx1fGVufDB8fDB8fHww"
+                  class="card-img-top w-100"
+                  alt="..."
+                />
+                <span class="position-absolute top-0 end-0 badge rounded-pill bg-danger mt-1 me-1"> HOT </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-start fs-6 fw-bold">Cefalù</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary bg-info text-black border border-0">Prenota</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container d-none d-sm-flex mt-4">
+      <div class="container mt-3 mb-3 d-none d-md-block" id="welcome-summer">
+        <h4 class="mb-3">Offerta del giorno</h4>
         <div class="row">
-          <h3>Offerta del giorno</h3>
           <div class="col-8">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydG9nYWxsb3xlbnwwfHwwfHx8MA%3D%3D"
               alt="..."
+              class="rounded object-fit-cover overflow-hidden w-100"
             />
           </div>
-
           <div class="col-4">
-            <h2 class="fs-1 fw-lighter">Rio De Janeiro</h2>
+            <h2 class="fs-1 fw-lighter">Porto <br />Portogallo</h2>
             <span class="text-secondary">15.01.2021 - 31.01.2021</span>
             <p class="mt-3">Ville a partire da 500$, <br />non fartele sfuggire!</p>
             <span class="badge text-bg-dark">Best offer</span>
           </div>
         </div>
       </div>
-      <div id="last-minute" class="container mt-4">
+      <div id="last-minute" class="container mt-4 mb-3">
         <div class="row d-flex flex-wrap">
           <h3>Last Minute</h3>
-          <div class="col-2 object-fit-cover">
+          <div class="col-2 object-fit-cover shadow">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://images.unsplash.com/photo-1611773951410-3099ecbfd5ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGFlc2FnZ2lvJTIwbmF0dXJhbGV8ZW58MHx8MHx8fDA%3D"
+              class="card-img-top rounded h-100"
               alt="..."
             />
           </div>
-          <div class="col-2 rounded object-fit-cover">
+          <div class="col-2 rounded object-fit-cover shadow">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://plus.unsplash.com/premium_photo-1669868117080-45dee1bae4fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGFlc2FnZ2lvJTIwbmF0dXJhbGV8ZW58MHx8MHx8fDA%3D"
+              class="card-img-top rounded h-100"
               alt="..."
             />
           </div>
-          <div class="col-2 rounded object-fit-cover">
+          <div class="col-2 rounded object-fit-cover shadow">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://images.unsplash.com/photo-1594836567080-1a669ba3790a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhZXNhZ2dpbyUyMG5hdHVyYWxlfGVufDB8fDB8fHww"
+              class="card-img-top rounded h-100"
               alt="..."
             />
           </div>
-          <div class="col-2 rounded object-fit-cover">
+          <div class="col-2 rounded object-fit-cover shadow">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://images.unsplash.com/photo-1611773952327-fd0771f59aa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFlc2FnZ2lvJTIwbmF0dXJhbGV8ZW58MHx8MHx8fDA%3D"
+              class="card-img-top rounded h-100"
               alt="..."
             />
           </div>
-          <div class="col-2 rounded object-fit-cover">
+          <div class="col-2 rounded object-fit-cover shadow">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://images.unsplash.com/photo-1615752593016-3af794df7835?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBhZXNhZ2dpbyUyMG5hdHVyYWxlfGVufDB8fDB8fHww"
+              class="card-img-top rounded h-100"
               alt="..."
             />
           </div>
-          <div class="col-2 rounded object-fit-cover">
+          <div class="col-2 rounded object-fit-cover shadow">
             <img
-              src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fHww"
-              class="card-img-top rounded"
+              src="https://images.unsplash.com/photo-1419064642531-e575728395f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhZXNhZ2dpbyUyMG5hdHVyYWxlfGVufDB8fDB8fHww"
+              class="card-img-top rounded h-100"
               alt="..."
             />
           </div>
         </div>
       </div>
-      <div id="Recensioni" class="container d-flex flex-column mt-4">
-        <h3 class="text-center">Dicono di noi</h3>
-        <div class="user d-flex align-items-center">
-          <img
-            src="https://t3.ftcdn.net/jpg/05/17/79/88/360_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg"
-            alt="user"
-            class="w-25"
-          />
-          <div class="col-11">
-            <h4>Username</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat facere dolorem tempora culpa unde,
-              debitis similique porro rerum quidem praesentium maxime ab beatae quam possimus consectetur veritatis
-              dicta? Autem!
-            </p>
+      <div class="container mt-5">
+        <h4 class="mb-4 text-center">Dicono di noi</h4>
+        <div class="d-flex flex-column">
+          <div class="d-flex d-row align-items-center mb-3">
+            <div class="w-50">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="user"
+                class="w-50 border border-info rounded-circle"
+              />
+            </div>
+            <div>
+              <h4>Username</h4>
+              <p class="fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat facere dolorem tempora culpa unde,
+                debitis similique porro rerum quidem praesentium maxime ab
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="user d-flex align-items-center">
-          <img
-            src="https://t3.ftcdn.net/jpg/05/17/79/88/360_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg"
-            alt="user"
-            class="w-25"
-          />
-          <div class="col-11">
-            <h4>Username</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat facere dolorem tempora culpa unde,
-              debitis similique porro rerum quidem praesentium maxime ab beatae quam possimus consectetur veritatis
-              dicta? Autem!
-            </p>
+          <div class="d-flex d-row align-items-center mb-3">
+            <div class="w-50">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="user"
+                class="w-50 border border-info rounded-circle"
+              />
+            </div>
+            <div>
+              <h4>Username</h4>
+              <p class="fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat facere dolorem tempora culpa unde,
+                debitis similique porro rerum quidem praesentium maxime ab
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="user d-flex align-items-center">
-          <img
-            src="https://t3.ftcdn.net/jpg/05/17/79/88/360_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg"
-            alt="user"
-            class="w-25"
-          />
-          <div class="col-11">
-            <h4>Username</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat facere dolorem tempora culpa unde,
-              debitis similique porro rerum quidem praesentium maxime ab beatae quam possimus consectetur veritatis
-              dicta? Autem!
-            </p>
+          <div class="d-flex d-row align-items-center mb-3">
+            <div class="w-50">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="user"
+                class="w-50 border border-info rounded-circle"
+              />
+            </div>
+            <div>
+              <h4>Username</h4>
+              <p class="fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat facere dolorem tempora culpa unde,
+                debitis similique porro rerum quidem praesentium maxime ab
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </main>
     <footer class="bg-dark text-center py-5 mt-5">
       <button type="button" class="border border-secondary bg-dark text-secondary rounded py-1 px-2">Contattaci</button>
+      <button type="button" class="border border-secondary bg-dark text-secondary rounded py-1 px-2 btn-1">
+        Rimuovi Card
+      </button>
+      <button type="button" class="border border-secondary bg-dark text-secondary rounded py-1 px-2 btn-2">
+        Numero Viaggi
+      </button>
       <p class="text-white pt-4">&copy; 2021 Kalina Travel LTD. All Rights Reserved.</p>
     </footer>
-
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
